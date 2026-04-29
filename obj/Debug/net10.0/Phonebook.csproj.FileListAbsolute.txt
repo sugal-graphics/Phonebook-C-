@@ -1,0 +1,14 @@
+/Users/sugaldarlami/C# projects/Phonebook/bin/Debug/net10.0/Phonebook
+/Users/sugaldarlami/C# projects/Phonebook/bin/Debug/net10.0/Phonebook.deps.json
+/Users/sugaldarlami/C# projects/Phonebook/bin/Debug/net10.0/Phonebook.runtimeconfig.json
+/Users/sugaldarlami/C# projects/Phonebook/bin/Debug/net10.0/Phonebook.dll
+/Users/sugaldarlami/C# projects/Phonebook/bin/Debug/net10.0/Phonebook.pdb
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.AssemblyInfoInputs.cache
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.AssemblyInfo.cs
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.csproj.CoreCompileInputs.cache
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.dll
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/refint/Phonebook.dll
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.pdb
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.genruntimeconfig.cache
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/ref/Phonebook.dll
