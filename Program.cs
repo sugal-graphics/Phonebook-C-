@@ -2,8 +2,12 @@
 
 Dictionary<string, string> phonebook = new Dictionary<string, string>();
 
-string adminUserName = "Peng";
-string adminPassword = "784569";
+// string adminUserName = "Peng";
+// string adminPassword = "784569";
+string[] lines = File.ReadAllLines("config.txt");
+string adminUserName = lines[0];
+string adminPassword = lines[1];
+
 
 
 while (true)
