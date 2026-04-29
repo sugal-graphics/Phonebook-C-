@@ -2,6 +2,8 @@
 
 Dictionary<string, string> phonebook = new Dictionary<string, string>();
 
+
+
 while (true)
 {
     Console.WriteLine("----------Phone Book------------");
@@ -17,17 +19,43 @@ while (true)
     string choice = Console.ReadLine();
     if (choice == "1")
     {
-        Console.Write("Enter your name: ");
-        string username = Console.ReadLine().ToLower();
 
-        Console.Write("Enter your mobile number: ");
-        string mobileNumber = Console.ReadLine();
+        while (true)
+        {
 
-        phonebook[username] = mobileNumber;
-        Console.WriteLine("Contact added succesfully....");
+            Console.Write("Enter your name: ");
+            string username = Console.ReadLine().ToLower();
 
+            if (!string.IsNullOrWhiteSpace(username))
+            {
+                while (true)
+                {
+                    Console.Write("Enter your mobile number: ");
+                    string mobileNumber = Console.ReadLine();
 
+                    if (!string.IsNullOrWhiteSpace(mobileNumber))
+                    {
+                        phonebook[username] = mobileNumber;
+                        Console.WriteLine("Contact added succesfully....");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("---Mobile no cannot be empty---");
+                    }
+
+                }
+                break;
+            }
+            else
+            {
+                Console.WriteLine("---Name cannot be empty---");
+            }
+        }
     }
+
+
+
 
     else if (choice == "2")
     {

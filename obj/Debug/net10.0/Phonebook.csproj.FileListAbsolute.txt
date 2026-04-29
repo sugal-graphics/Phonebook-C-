@@ -12,3 +12,4 @@
 /Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.pdb
 /Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.genruntimeconfig.cache
 /Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/ref/Phonebook.dll
+/Users/sugaldarlami/C# projects/Phonebook/obj/Debug/net10.0/Phonebook.sourcelink.json
