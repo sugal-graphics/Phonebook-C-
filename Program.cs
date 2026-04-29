@@ -2,8 +2,29 @@
 
 Dictionary<string, string> phonebook = new Dictionary<string, string>();
 
+string adminUserName = "Peng";
+string adminPassword = "784569";
 
 
+while (true)
+{
+    Console.WriteLine("----Login to get contact access----");
+    Console.WriteLine("Enter your username: ");
+    string inputAdminUserName = Console.ReadLine();
+    Console.WriteLine("Enter the password: ");
+    string inputAdminPassword = Console.ReadLine();
+
+    if (inputAdminUserName == adminUserName && inputAdminPassword == adminPassword)
+    {
+
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Please input valid username and password");
+    }
+
+}
 while (true)
 {
     Console.WriteLine("----------Phone Book------------");
@@ -126,3 +147,7 @@ while (true)
     }
 
 }
+
+
+
+
