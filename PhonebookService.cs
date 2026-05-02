@@ -9,18 +9,19 @@ public class PhonebookService
         while (true)
         {
             Console.Write("Enter name: ");
-            string _inputUserName = Console.ReadLine()?.ToLower();
+            string? _inputUserName = Console.ReadLine();
 
             if (string.IsNullOrWhiteSpace(_inputUserName))
             {
                 Console.WriteLine("Name cannot be empty");
                 continue;
             }
+            string name = _inputUserName.ToLower();
 
             while (true)
             {
                 Console.Write("Enter number: ");
-                string _inputUserNumber = Console.ReadLine();
+                string? _inputUserNumber = Console.ReadLine()?.ToLower();
 
                 if (string.IsNullOrWhiteSpace(_inputUserNumber))
                 {
@@ -28,7 +29,13 @@ public class PhonebookService
                     continue;
                 }
 
-                _phonebook[_inputUserName] = _inputUserNumber;
+                if (!long.TryParse(_inputUserNumber, out _))
+                {
+                    Console.WriteLine("Invalid number, only digits are allowed");
+                    continue;
+                }
+
+                _phonebook[name] = _inputUserNumber;
                 Console.WriteLine("Contact Added Succesfully....");
                 return;
             }
@@ -39,10 +46,17 @@ public class PhonebookService
     public void SearchContact()
     {
         Console.Write("Enter name: ");
-        string _inputUserName = Console.ReadLine()?.ToLower();
+        string? _inputUserName = Console.ReadLine();
 
-        if (_phonebook.ContainsKey(_inputUserName))
-            Console.WriteLine($"Number: {_phonebook[_inputUserName]}");
+        if (string.IsNullOrWhiteSpace(_inputUserName))
+        {
+            Console.WriteLine("Invalid name");
+            return;
+        }
+        string name = _inputUserName.ToLower();
+
+        if (_phonebook.ContainsKey(name))
+            Console.WriteLine($"Number: {_phonebook[name]}");
         else
             Console.WriteLine("Contact not found");
 
@@ -61,9 +75,15 @@ public class PhonebookService
     public void DeleteContact()
     {
         Console.Write("Enter name: ");
-        string _inputUserName = Console.ReadLine()?.ToLower();
+        string? _inputUserName = Console.ReadLine();
 
-        if (_phonebook.Remove(_inputUserName))
+        if (string.IsNullOrWhiteSpace(_inputUserName))
+        {
+            Console.WriteLine("Name cannot be empty");
+            return;
+        }
+        string name = _inputUserName.ToLower();
+        if (_phonebook.Remove(name))
             Console.WriteLine("Contact deleted succesfully...");
         else
             Console.WriteLine("Contact not found..");
@@ -71,17 +91,44 @@ public class PhonebookService
 
     public void UpdateContact()
     {
+
         Console.Write("Enter name: ");
-        string _inputUserName = Console.ReadLine()?.ToLower();
+        string? _inputUserName = Console.ReadLine();
 
-        if (_phonebook.ContainsKey(_inputUserName))
+        if (string.IsNullOrWhiteSpace(_inputUserName))
         {
-            Console.Write("Enter number: ");
-            string _newNumber = Console.ReadLine();
+            Console.WriteLine("Name cannot be empty");
+            return;
+        }
 
-            _phonebook[_inputUserName] = _newNumber;
-            Console.WriteLine("Number added succesfully");
+        string name = _inputUserName.ToLower();
 
+        if (_phonebook.ContainsKey(name))
+        {
+
+            while (true)
+            {
+                Console.Write("Enter number: ");
+                string? _newNumber = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(_newNumber))
+                {
+                    Console.WriteLine("Invalid number");
+                    continue;
+                }
+
+                if (!long.TryParse(_newNumber, out _))
+                {
+                    Console.WriteLine("Invalid, Only digits are allowed");
+                    continue;
+
+                }
+
+                _phonebook[name] = _newNumber;
+                Console.WriteLine("Number added succesfully");
+                return;
+
+            }
         }
 
         else
@@ -89,7 +136,7 @@ public class PhonebookService
             Console.WriteLine("Contact not found..");
         }
     }
-
-
-
 }
+
+
+

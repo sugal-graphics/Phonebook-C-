@@ -173,7 +173,7 @@ class Program
             Console.WriteLine("6. Exit");
 
             Console.WriteLine("Choose an option");
-            string _choice = Console.ReadLine();
+            string? _choice = Console.ReadLine();
 
             switch (_choice)
             {

@@ -15,10 +15,10 @@ public class AuthService
         while (true)
         {
             Console.Write("Enter your username: ");
-            string userInput = Console.ReadLine();
+            string? userInput = Console.ReadLine();
 
             Console.Write("Enter your password: ");
-            string passwordInput = Console.ReadLine();
+            string? passwordInput = Console.ReadLine();
 
             if (userInput == _username && passwordInput == _password)
                 return true;
